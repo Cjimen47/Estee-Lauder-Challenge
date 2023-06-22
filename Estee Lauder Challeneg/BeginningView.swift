@@ -46,9 +46,9 @@ struct BeginningView: View {
                         .padding()
                         .cornerRadius(80)
                     
-                    /*Button(action:{}, label: {NavigationLink(destination:MidView())
+                    Button(action:{}, label: {NavigationLink(destination:MidView())
                         {Text("Click Here to learn more lol")}
-                    })*/
+                    })
                 }
                 .padding()
             }
