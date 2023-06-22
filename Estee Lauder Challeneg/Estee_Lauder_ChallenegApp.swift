@@ -11,7 +11,7 @@ import SwiftUI
 struct Estee_Lauder_ChallenegApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BeginningView()
         }
     }
 }
