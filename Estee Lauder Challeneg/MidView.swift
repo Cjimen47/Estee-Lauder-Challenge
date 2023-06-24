@@ -10,11 +10,11 @@ struct MidView: View {
     var body: some View {
         NavigationStack{
         ZStack{
-            Color(red: 255/255, green: 201/255, blue: 218/255)
+            Rectangle().fill(LinearGradient(gradient: Gradient(colors: [Color(red: 255/255, green: 201/255, blue: 218/255),Color(red: 230/255, green: 57/255, blue: 103/255)]), startPoint: .leading, endPoint: .trailing))
                 .ignoresSafeArea()
-            Rectangle()
-                .strokeBorder(Color(red: 250/255, green: 12/255, blue: 88/255), lineWidth: 50)
-                .frame(width:450, height: 940)
+            //Color(red: 255/255, green: 201/255, blue: 218/255)
+                //.ignoresSafeArea()
+            
             VStack{
                 Text("Introducing")
                     .font(.title)

@@ -15,39 +15,41 @@ struct BeginningView: View {
         
         NavigationStack{
             ZStack{
-                //Trying to set up a general frame
-                Color(red: 171/255, green: 237/255, blue: 130/255)
+                Rectangle().fill(LinearGradient(gradient: Gradient(colors: [Color(red: 171/255, green: 237/255, blue: 130/255), Color(red: 255/255, green: 201/255, blue: 218/255)]), startPoint: .leading, endPoint: .trailing))
                     .ignoresSafeArea()
-                Rectangle()
-                    .strokeBorder(Color(red: 255/255, green: 201/255, blue: 218/255), lineWidth: 50)
-                    .frame(width:450, height: 900)
-                    
                 
                 VStack {
                     Image("first")
                         .resizable(resizingMode: .stretch)
                         .frame(width: 200.0, height: 100.0)
+                        .border(Color(red: 230/255, green: 57/255, blue: 103/255), width: 4)
                         .padding()
                         .cornerRadius(80)
                         
                         
                         
-                    Text("You Want to Become Even More\n    Stunning Than You Already\n             Are Gorgeous?!")
+                    Text("You Want to Become Even More\n    Stunning Than You Already\n             Are, Gorgeous?!")
+                        .font(.custom("OptimaDisplay-Book", size: 20))
                     Image("sec")
                         .resizable(resizingMode: .stretch)
                         .frame(width: 200.0, height: 100.0)
+                        .border(Color(red: 230/255, green: 57/255, blue: 103/255), width: 4)
                         .padding()
                         .cornerRadius(80)
                     
                     Text("You Want To Do it Using Ingredients\n     That Don't Sound Like They're\n                 Melt Your Face Off?")
+                        .font(.custom("AkzidenzGroteskBQ-Reg.tff", size: 20))
                     
                     Image("third").resizable(resizingMode: .stretch)
                         .frame(width: 200.0, height: 100.0)
+                        .border(Color(red: 230/255, green: 57/255, blue: 103/255), width: 4)
                         .padding()
                         .cornerRadius(80)
                     
                     Button(action:{}, label: {NavigationLink(destination:MidView())
-                        {Text("Click Here to learn more lol")}
+                        {Text("Click Here to learn more lol")
+                                .font(.custom("AkzidenzGroteskBQ-Reg.tff", size: 20))
+                        }
                     })
                 }
                 .padding()

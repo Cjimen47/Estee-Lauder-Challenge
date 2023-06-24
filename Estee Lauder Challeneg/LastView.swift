@@ -9,27 +9,114 @@ import SwiftUI
 struct LastView: View {
     var body: some View {
         ZStack{
-            Color(red: 255/255, green: 201/255, blue: 218/255)
+            Rectangle().fill(LinearGradient(gradient: Gradient(colors: [Color(red: 230/255, green: 57/255, blue: 103/255),Color(red: 179/255, green: 227/255, blue: 255/255)]), startPoint: .leading, endPoint: .trailing))
                 .ignoresSafeArea()
-            Rectangle()
-                .strokeBorder(Color(red: 250/255, green: 12/255, blue: 88/255), lineWidth: 50)
-                .frame(width:450, height: 940)
             
             ScrollViewReader { proxy in
                 ScrollView{
-                    VStack(spacing : 10){
-                       Text("Next Question")
+                    VStack(spacing : 700){
+                        VStack{
+                            Text("I'll prove to you that this product is\n\t\t    absolutely killer.")
+                            Button("Click me please"){
+                                proxy.scrollTo(2)
+                            }
                             .id(1)
-                        Button("Click me please"){
-                            proxy.scrollTo(2)
+                        }
+                        
+                        //Every individual stack is it's own
+                        VStack{
+                            Text("Next Question\n\n\n\n\n\n\n\n\n")
+                            Image("first")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Image("sec")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Image("third")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Button("Click me please"){
+                                proxy.scrollTo(3)
+                            }
+                            .id(2)
                         }
                         
                         
-                        Text("Next Question")
-                         Button("Click me please"){
-                             
-                         }
-                         .id(2)
+                        VStack{
+                            Text("Next Question\n")
+                            Image("sec")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Image("sec")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Image("third")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Button("Click me please"){
+                                proxy.scrollTo(4)
+                            }
+                            .id(3)
+                        }
+                        
+                        
+                        VStack{
+                            Text("Next Question\n")
+                            Image("sec")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Image("sec")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Image("sec")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Button("Click me please"){
+                                proxy.scrollTo(5)
+                            }
+                            .id(4)
+                        }
+                        
+                        VStack{
+                            Text("Next Question\n\n\n\n\n\n\n")
+                            Image("first")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Image("sec")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Image("third")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 200.0, height: 100.0)
+                                .padding()
+                                .cornerRadius(80)
+                            Button("Click me please"){
+                                
+                            }
+                            .id(5)
+                        }
                     }
                 }
                 
@@ -53,39 +140,7 @@ struct LastView: View {
                 }
                 
             }*/
-                
-                /*ScrollView(.vertical){
-                 VStack{
-                 Text("Lemme show you why the Nutrition line is\n            the best thing you've ever seen.")
-                 
-                 Text("Scroll down to the first question.")
-                 
-                 Image("fourth")
-                 .resizable(resizingMode: .stretch)
-                 .frame(width: 100.0, height: 100.0)
-                 .padding()
-                 .cornerRadius(80)
-                 
-                 Image("fifth")
-                 .resizable(resizingMode: .stretch)
-                 .frame(width: 100.0, height: 100.0)
-                 .padding()
-                 .cornerRadius(80)
-                 
-                 Image("sixth")
-                 .resizable(resizingMode: .stretch)
-                 .frame(width: 100.0, height: 100.0)
-                 .padding()
-                 .cornerRadius(80)
-                 
-                 Image("seventh")
-                 .resizable(resizingMode: .stretch)
-                 .frame(width: 100.0, height: 100.0)
-                 .padding()
-                 .cornerRadius(80)
-                 }
-                 }*/
-                 .frame(height:500)
+                 .frame(height:700)
             }
         }
     }
